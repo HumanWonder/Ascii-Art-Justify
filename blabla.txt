@@ -1,0 +1,39 @@
+/* Lire fichier pour individualiser les caractères
+
+
+make(tableau de struct)
+Structure {
+	Ascii string (dans fichier)
+	Caractère string "!"
+	Height int (taille de 8 dans le fichier pour check si bien parsé)
+}
+système buffer dans lecture fichier : dès que prochaine ligne est vide, on append et on vide le buffer.
+
+index [lettre- 32] (car on commence à 32 dans le tableau ascii)
+
+Pour Color :
+const avec les valeurs string 
+
+ajouter un bool dans la struct --> si arg parsé dans les flag correspond à une couleur ET si lettre dans arg == lettre 
+
+TODO: -Récupérer l'arg dans l'input (os Args) arg sera string.
+
+split par les retours à la ligne 
+Si retour chariot et ligne vide, on vide le buffer (caractère suivant)
+
+
+
+REVERSE :
+
+Pour séparer ascii lettres du example.txt : 
+	idée : Check où existe un espace (variable wherespace = index où espace). 
+			Si oui, index(line)+1, si wherespace == index(où espace), on continue jusqu'à la huitième 
+
+	autre idée : check ligne par ligne sur la longueur de la lettre ascii (police qu'on a récupéré) sur la première ligne du .txt
+					si ok sur les 8 lignes, on a notre caractère (a stocker dans var ou print direct)
+		Comment : après avoir récupéré la police
+					ouvrir le fichier .txt 
+					couper la lettre ascii en lignes (si split, vérifier que la len est toujours ok en ajoutant une valeur équivalente au "\n")
+					range sur la structure de police 
+					comparer la ligne[0] jusqu'à len(ligneascii[0]) avec même ligne fichier[:len(line(fichier.txt))]
+					si ok, ligne(fichier)++ et on recommence. Si ligne[8] == ok, on stocke dans var (Test print)
