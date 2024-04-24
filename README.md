@@ -59,3 +59,4 @@ Or a basic text to Ascii program :
 go run . something [optional font]
 ```
 
+Subject : https://zone01normandie.org/git/root/public/src/branch/master/subjects/ascii-art/justify
